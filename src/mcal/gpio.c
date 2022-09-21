@@ -16,14 +16,12 @@ void gpio_Pin_Set( GPIO_pin *pin_id)
 			break;
 		case (GPIO_PORT_F):
 			RCC_GPIO |= RCC_GPIO_portF; // Enable clock for PORTF
+		  GPIO_PORT_F_DEN |= pin_id->pin;
+		  if(pin_id->dir == GPIO_PIN_OUT) GPIO_PORT_F_DIR |= pin_id->pin;
+	    else  GPIO_PORT_F_DIR &= ~(pin_id->pin);
 			break;
 	}
-	if(pin_id->dir == GPIO_PIN_OUT) 
-	{
-		GPIO_PORT_F_DEN |= pin_id->pin;
-		GPIO_PORT_F_DIR |= pin_id->pin;
-	}
-	else  GPIO_PORT_F_DEN &= ~pin_id->pin;
+	
 }
 
 
