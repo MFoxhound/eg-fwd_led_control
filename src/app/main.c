@@ -1,4 +1,4 @@
-#include "..\inc\MY_TM4C123GH6PM.c"
+#include "..\inc\MY_TM4C123GH6PM.h"
 
 
 GPIO_pin LED_RED;
