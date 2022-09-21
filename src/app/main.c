@@ -21,7 +21,7 @@ int main ( void )
 	
   gpio_Pin_Set(&LED_RED);
 	systick_Init();
-	set_LED_TIME(0.03 , 0.5);
+	set_LED_TIME(0.02 , 0.5);
 	while (1) 
 		{	
 			//ToDo: Some Processing.			

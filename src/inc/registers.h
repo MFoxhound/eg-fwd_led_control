@@ -36,7 +36,9 @@ typedef enum{
 //GPIO PORT F Registers
 
 //using only pin_f1, pin_f2, pin_f3 then the bit mask address = GPIO_PORT_F_DATA address + 0x38 = 0x40025000 + 0x38
+
 #define GPIO_PORT_F_DATA         (*(( reg_address)0x40025038)) //Page #660 in Datasheet 
+//#define GPIO_PORT_F_DATA         (*(( reg_address)0x400253FC)) //Page #660 in Datasheet
 #define GPIO_PORT_F_DATA_AHB     (*(( reg_address)0x4005D038)) //Page #660 in Datasheet
 #define GPIO_PORT_F_DIR          (*(( reg_address)0x40025400)) //Page #661 in Datasheet
 #define GPIO_POERT_F_DIR_AHB     (*(( reg_address)0x4005D400)) //Page #661 in Datasheet
