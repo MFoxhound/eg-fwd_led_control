@@ -3,6 +3,8 @@
 #include "registers.h"
 #include "../mcal/gpio.h"
 #include "variables.h"
+#include "../config/systick_cfg.h"
+
 
 void systick_Init(void);
 
